@@ -139,9 +139,9 @@ public class AudioCallsAdapter extends BaseAdapter {
             //status incomming or outgoing.
             if (filename.contains(CallStatus.INCOMING) || filename.contains(CallStatus.incoming)) {
 //            if (call_type.equals(CallStatus.INCOMING) || call_type.equals(CallStatus.incoming)) {
-                holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_incoming);
+                holder.callstatus1.setBackgroundResource(R.drawable.ic_call_received_black_24dp);
             } else {
-                holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_outgoing);
+                holder.callstatus1.setBackgroundResource(R.drawable.ic_call_made_black_24dp);
             }
 //            if (call_type.equals(CallStatus.OUTGOING) || call_type.equals(CallStatus.outgoing)) {
 //                holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_outgoing);
