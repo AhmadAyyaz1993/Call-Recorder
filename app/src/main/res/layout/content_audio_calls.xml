@@ -36,7 +36,6 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/recordingHeadertv"
         android:layout_marginTop="6dp"
-        android:entries="@array/contacts_list"
         android:scrollbars="none" />
 
 </LinearLayout>
