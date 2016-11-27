@@ -2,7 +2,6 @@ package net.net76.mannan.callrecorder.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
@@ -22,9 +21,9 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import net.net76.mannan.callrecorder.R;
 import net.net76.mannan.callrecorder.constants.CallStatus;
 import net.net76.mannan.callrecorder.model.CallAllDetails;
-import net.net76.mannan.callrecorder.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -210,12 +209,12 @@ public class AudioCallsAdapter extends BaseAdapter {
                             if (mediaPlayer.isPlaying()) {
                                 mediaPlayer.pause();
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    audioPlayDialogButton.setBackground(Resources.getSystem().getDrawable(android.R.drawable.ic_media_play));
+                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_filled_black_48dp);
                                 }
                             } else {
                                 mediaPlayer.start();
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    audioPlayDialogButton.setBackground(Resources.getSystem().getDrawable(android.R.drawable.ic_media_pause));
+                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_pause_circle_outline_black_48dp);
                                 }
                             }
                         } else {
@@ -223,12 +222,12 @@ public class AudioCallsAdapter extends BaseAdapter {
                             if (mediaPlayer.isPlaying()) {
                                 mediaPlayer.pause();
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    audioPlayDialogButton.setBackground(Resources.getSystem().getDrawable(android.R.drawable.ic_media_play));
+                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_filled_black_48dp);
                                 }
                             } else {
                                 mediaPlayer.start();
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    audioPlayDialogButton.setBackground(Resources.getSystem().getDrawable(android.R.drawable.ic_media_pause));
+                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_pause_circle_outline_black_48dp);
                                 }
                             }
                         }
@@ -293,7 +292,7 @@ public class AudioCallsAdapter extends BaseAdapter {
 
                 updateTime();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                    audioPlayDialogButton.setBackground(Resources.getSystem().getDrawable(android.R.drawable.ic_media_pause));
+                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_pause_circle_outline_black_48dp);
                 }
                 firsttime = false;
 
@@ -301,7 +300,7 @@ public class AudioCallsAdapter extends BaseAdapter {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
                         audioPlayDialogSeekBar.setProgress(0);
-                        audioPlayDialogButton.setBackground(Resources.getSystem().getDrawable(android.R.drawable.ic_media_play));
+                        audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_filled_black_48dp);
                         filecompleted = true;
                         startTime = 0;
                         mediaPlayer.pause();
