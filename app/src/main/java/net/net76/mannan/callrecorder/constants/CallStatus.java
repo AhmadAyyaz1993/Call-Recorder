@@ -8,6 +8,9 @@ public class CallStatus {
     public static final String OUTGOING = "OUTGOING"; // outgoing call
     public static final String INCOMING = "INCOMING"; // incoming call
 
+    public static final String outgoing = "outgoing";
+    public static final String incoming = "incoming";
+
     public static final String MISSED = "Missed Call"; // incoming call
 
     public static final String missedCalls = "Missed Call"; // incoming call

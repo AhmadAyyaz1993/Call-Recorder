@@ -10,8 +10,9 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.util.Log;
 
-import net.net76.mannan.callrecorder.util.MyDateTimeStamp;
+import net.net76.mannan.callrecorder.constants.CallStatus;
 import net.net76.mannan.callrecorder.constants.MyLogTags;
+import net.net76.mannan.callrecorder.util.MyDateTimeStamp;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +20,7 @@ import java.io.IOException;
 /**
  * Created by MANNAN on 6/21/2016.
  */
-public class MyVoiceRecordingService extends Service{
+public class MyVoiceRecordingService extends Service {
 
     public static boolean recordStarted = false;
     public static boolean wasRinging = false;
@@ -28,6 +29,8 @@ public class MyVoiceRecordingService extends Service{
     String type, phNumber, agent_num = "1";
     public static String file_name;
     public static String audioFileDirectoryPath = "/CallRecorderFiles";
+    public static String incomingPath = "/Incoming";
+    public static String outgoingPath = "/Outgoing";
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -39,10 +42,10 @@ public class MyVoiceRecordingService extends Service{
 
         try {
             Bundle extras = intent.getExtras();
-            if(extras == null) {
-                phNumber= "1";
-                agent_num= "1";
-                type= "call";
+            if (extras == null) {
+                phNumber = "1";
+                agent_num = "1";
+                type = "call";
             } else {
                 phNumber = extras.getString("phNumber");
                 agent_num = extras.getString("agent_num");
@@ -50,8 +53,8 @@ public class MyVoiceRecordingService extends Service{
             }
             recordVoiceCall(phNumber, type);
 //            recordVoiceCallAudioRecorder(phNumber, type);
-        }catch (Exception e){
-            Log.d(MyLogTags.recording, "Recording bundle Exception: "+e.getMessage());
+        } catch (Exception e) {
+            Log.d(MyLogTags.recording, "Recording bundle Exception: " + e.getMessage());
         }
 
         return START_NOT_STICKY;
@@ -68,27 +71,35 @@ public class MyVoiceRecordingService extends Service{
                             .setSampleRate(32000)
                             .setChannelMask(AudioFormat.CHANNEL_IN_MONO)
                             .build())
-                    .setBufferSizeInBytes(2*8000)
+                    .setBufferSizeInBytes(2 * 8000)
                     .build();
         }
         audioRecord.startRecording();
     }
 
-    public void recordVoiceCall(String phNumber, String type){
+    public void recordVoiceCall(String phNumber, String type) {
 
         File LastingSalesRecordingsDir = new File(Environment.getExternalStorageDirectory(),
                 audioFileDirectoryPath);
+
+        if (type.equals(CallStatus.INCOMING)) {
+            LastingSalesRecordingsDir = new File(Environment.getExternalStorageDirectory(),
+                    audioFileDirectoryPath + incomingPath);
+        } else if (type.equals(CallStatus.OUTGOING)) {
+            LastingSalesRecordingsDir = new File(Environment.getExternalStorageDirectory(),
+                    audioFileDirectoryPath + outgoingPath);
+        }
+
         if (!LastingSalesRecordingsDir.exists()) {
             LastingSalesRecordingsDir.mkdirs();
         }
 
-        file_name = "call_"+ MyDateTimeStamp.getCurrentDate()+"_"+
-                MyDateTimeStamp.getCurrentTimeForFile()+"_"+type+"_"+phNumber+"_";
+        file_name = "call_" + MyDateTimeStamp.getCurrentDate() + "_" +
+                MyDateTimeStamp.getCurrentTimeForFile() + "_" + type + "_" + phNumber + "_";
         try {
             audioFile = File.createTempFile(file_name, ".mp3", LastingSalesRecordingsDir);
-        }
-        catch (IOException e) {
-            Log.d(MyLogTags.recording, "Recording IOException: "+e.getMessage());
+        } catch (IOException e) {
+            Log.d(MyLogTags.recording, "Recording IOException: " + e.getMessage());
             e.printStackTrace();
         }
         String path = Environment.getExternalStorageDirectory().getAbsolutePath();
@@ -108,46 +119,44 @@ public class MyVoiceRecordingService extends Service{
 
                 Log.d(MyLogTags.recording, "Recording output formats set.");
             }
-        }catch (Exception e){
-            Log.d(MyLogTags.recording, "Recording Exception: "+e);
+        } catch (Exception e) {
+            Log.d(MyLogTags.recording, "Recording Exception: " + e);
         }
         try {
             recorder.prepare();
             Log.d(MyLogTags.recording, "Recording Recorder prepared.");
         } catch (IllegalStateException e) {
             deleteVoiceFile(file_name);
-            Log.d(MyLogTags.recording, "Recording prepare IllegalStateException: "+e);
+            Log.d(MyLogTags.recording, "Recording prepare IllegalStateException: " + e);
         } catch (IOException e) {
             deleteVoiceFile(file_name);
-            Log.d(MyLogTags.recording, "Recording prepare IOException: "+e);
+            Log.d(MyLogTags.recording, "Recording prepare IOException: " + e);
         }
 
         try {
             String state = Environment.getExternalStorageState();
-            if(!state.equals(Environment.MEDIA_MOUNTED))  {
-                Log.d(MyLogTags.recording,"SD Card is not mounted.  It is " + state + ".");
+            if (!state.equals(Environment.MEDIA_MOUNTED)) {
+                Log.d(MyLogTags.recording, "SD Card is not mounted.  It is " + state + ".");
                 throw new IOException("SD Card is not mounted.  It is " + state + ".");
             }
 
             recorder.start();
-            Log.d(MyLogTags.recording, "Recording Recorder started for: "+phNumber);
+            Log.d(MyLogTags.recording, "Recording Recorder started for: " + phNumber);
             recordStarted = true;
-        }catch (Throwable e) {
+        } catch (Throwable e) {
             deleteVoiceFile(file_name);
-            Log.d(MyLogTags.recording, "Recording start Exception: "+e);
+            Log.d(MyLogTags.recording, "Recording start Exception: " + e);
         }
     }
 
-    public void deleteVoiceFile(String fileName){
+    public void deleteVoiceFile(String fileName) {
         File[] myFiles = new File[0];
 
         File pathToRecordings = new File(
                 Environment.getExternalStorageDirectory() + audioFileDirectoryPath);
-        if(pathToRecordings.exists())
-        {
+        if (pathToRecordings.exists()) {
             myFiles = pathToRecordings.listFiles();
-        }
-        else
+        } else
             Log.d(MyLogTags.audioFile, "No files found");
         if (myFiles.length != 0) {
             for (File file : myFiles) {
@@ -162,7 +171,7 @@ public class MyVoiceRecordingService extends Service{
                 }
 //                }
             }
-        }else
+        } else
             pathToRecordings.delete();
     }
 

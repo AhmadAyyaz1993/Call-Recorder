@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import net.net76.mannan.callrecorder.constants.CallStatus;
 import net.net76.mannan.callrecorder.model.CallAllDetails;
 import net.net76.mannan.callrecorder.R;
 
@@ -109,13 +110,13 @@ public class AudioCallsAdapter extends BaseAdapter{
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.
                                     toMinutes((long) millSecond))));
 
-            String str = audioFileList.get(position).filename;
-            final String call_type = str.substring(25, 33);
-            int numlastpositionstr = str.lastIndexOf("_");
+            String filename = audioFileList.get(position).filename;
+            final String call_type = filename.substring(25, 33);
+            int numlastpositionstr = filename.lastIndexOf("_");
             String call_number = "";
-            call_number = str.substring(34, numlastpositionstr);
-            String call_time = str.substring(16, 21);
-            String call_date = str.substring(5,15);
+            call_number = filename.substring(34, numlastpositionstr);
+            String call_time = filename.substring(16, 21);
+            String call_date = filename.substring(5,15);
             char[] call_timeArray = call_time.toCharArray();
             for(int x = 0; x<call_timeArray.length; x++)
             {
@@ -130,12 +131,15 @@ public class AudioCallsAdapter extends BaseAdapter{
             holder.callfileName.setText(call_number);
 
             //status incomming or outgoing.
-            if (call_type.equals("incoming")) {
+            if (filename.contains(CallStatus.INCOMING) || filename.contains(CallStatus.incoming)) {
+//            if (call_type.equals(CallStatus.INCOMING) || call_type.equals(CallStatus.incoming)) {
                 holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_incoming);
-            }
-            if (call_type.equals("outgoing")) {
+            }else{
                 holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_outgoing);
             }
+//            if (call_type.equals(CallStatus.OUTGOING) || call_type.equals(CallStatus.outgoing)) {
+//                holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_outgoing);
+//            }
         }
         else{
             Log.d("audiofilesize","Audio file size is 0");

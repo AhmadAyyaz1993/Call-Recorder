@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="net.net76.mannan.callrecorder.activity.HomeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:elevation="4dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="4dp"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@color/transparent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="center"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="true">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="130dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="6dp"
+                    android:visibility="gone"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <TextView
+                        android:id="@+id/tutorial_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/app_title"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/backdrop_subtitle"
+                        app:layout_collapseParallaxMultiplier="0.7" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="6dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
+                android:elevation="6dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:tabGravity="fill"
+                app:tabMaxWidth="168dp"
+                app:tabMode="fixed" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/containerViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+</android.support.design.widget.CoordinatorLayout>

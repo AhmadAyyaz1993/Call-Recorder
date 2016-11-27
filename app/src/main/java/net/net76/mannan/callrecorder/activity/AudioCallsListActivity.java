@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import net.net76.mannan.callrecorder.R;
 import net.net76.mannan.callrecorder.adapter.AudioCallsAdapter;
@@ -23,12 +24,13 @@ import static net.net76.mannan.callrecorder.service.MyVoiceRecordingService.audi
  */
 public class AudioCallsListActivity extends AppCompatActivity {
 
-    ListView lv;
+    TextView recordingHeadertv;
+    ListView recordingsListView;
     Context context;
     private ArrayList<CallAllDetails> audioFileList = new ArrayList<CallAllDetails>();
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audio_calls);
 
@@ -36,39 +38,46 @@ public class AudioCallsListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        initaliseViews();
+
         ArrayList<String> filespath = new ArrayList<String>();
+
         String fileName;
         filespath = addFileToList();
-        for(int i=0;i<filespath.size();i++)
-        {
+        for (int i = 0; i < filespath.size(); i++) {
             fileName = new File(filespath.get(i)).getName();
-            audioFileList.add(new CallAllDetails(filespath.get(i),fileName));
+            audioFileList.add(new CallAllDetails(filespath.get(i), fileName));
         }
         Collections.reverse(audioFileList);
-        context=this;
-        lv=(ListView) findViewById(R.id.mobile_list);
-        lv.setAdapter(new AudioCallsAdapter(this,audioFileList));
+        context = this;
+        if (audioFileList.size() == 0) {
+            recordingHeadertv.setText("No recording found.");
+        } else {
+            recordingsListView.setAdapter(new AudioCallsAdapter(this, audioFileList));
+        }
     }
-    private ArrayList<String> addFileToList()
-    {
+
+    private void initaliseViews() {
+        recordingHeadertv = (TextView) findViewById(R.id.recordingHeadertv);
+        recordingsListView = (ListView) findViewById(R.id.recordingsListView);
+    }
+
+    private ArrayList<String> addFileToList() {
         ArrayList<String> filespath = new ArrayList<String>();
 //        File pathToRecordings = new File(Environment.getExternalStorageDirectory()+"/Download");//gennymotion
 //        File pathToRecordings = new File(Environment.getExternalStorageDirectory()+ "/Music");//Mobiles link
-        File pathToRecordings = new File(Environment.getExternalStorageDirectory()+ audioFileDirectoryPath);
+        File pathToRecordings = new File(Environment.getExternalStorageDirectory() + audioFileDirectoryPath);
 //        File pathToRecordings = new File(Environment.getExternalStorageDirectory()+"/zedge/ringtone");
 //        File pathToRecordings = new File(Environment.getExternalStorageDirectory()+ "/Music");//Nasir Mobiles link
-        if (pathToRecordings.exists())
-        {
+        if (pathToRecordings.exists()) {
             File myFiles[] = pathToRecordings.listFiles();
-            for (int i = 0; i < myFiles.length; i++)
-            {
+            for (int i = 0; i < myFiles.length; i++) {
 //                if (myFiles[i].getName().endsWith(".mp3"))
 //                {
-                    filespath.add(myFiles[i].getPath());
+                filespath.add(myFiles[i].getPath());
 //                }
             }
-        }
-        else
+        } else
             Log.d("audioFile", "No files found");
 
         return filespath;

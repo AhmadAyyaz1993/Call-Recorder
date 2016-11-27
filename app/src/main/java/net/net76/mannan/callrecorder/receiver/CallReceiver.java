@@ -14,9 +14,8 @@ import android.provider.CallLog;
 import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import android.widget.Toast;
 
-import net.net76.mannan.callrecorder.PrefManager;
+import net.net76.mannan.callrecorder.util.PrefManager;
 import net.net76.mannan.callrecorder.constants.CallStatus;
 import net.net76.mannan.callrecorder.constants.Constants;
 import net.net76.mannan.callrecorder.constants.MyLogTags;
@@ -52,8 +51,8 @@ public class CallReceiver extends BroadcastReceiver {
                     CallType = CallTypeIncoming;
                     Log.d(MyLogTags.MPR, "Its Ringing [" + number + "]");
                     if (prefManager.getCallRecord() == Constants.RECORD_ALL
-                            || prefManager.getCallRecord() == Constants.RECORD_INCOMING ) {
-                        startVoiceRecordingService(context, number,CallStatus.INCOMING);
+                            || prefManager.getCallRecord() == Constants.RECORD_INCOMING) {
+                        startVoiceRecordingService(context, number, CallStatus.INCOMING);
                     }
                 }
                 if (TelephonyManager.EXTRA_STATE_IDLE.equals(state)) {
@@ -97,14 +96,13 @@ public class CallReceiver extends BroadcastReceiver {
 //                        phNumber = phNumber.replaceAll("[^0-9]","");
 
                         try {
-                            if (phNumber.substring(0, 3).equals("+92")) {
+                            if (phNumber.startsWith("+92")) {
                                 phNumber = "0" + phNumber.substring(3, phNumber.length());
-                            } else if (phNumber.substring(0, 1).equals("+")) {
+                            } else if (phNumber.startsWith("+")) {
                                 phNumber = "00" + phNumber.substring(1, phNumber.length());
-                            } else if ((phNumber.substring(0, 2).equals("77")
-                                    /*&& phNumber.length() > 10*/)) {
-                                phNumber = phNumber.substring(2, phNumber.length());
-                            } else phNumber = phNumber;
+                            } else {
+                                phNumber = phNumber;
+                            }
                         } catch (Exception e) {
                         }
 
@@ -178,16 +176,16 @@ public class CallReceiver extends BroadcastReceiver {
                     Log.d(MyLogTags.MPR, "Its OffHook");
                     if (number != null) {
                         try {
-                            if (number.substring(0, 3).equals("+92")) {
+                            if (number.startsWith("+92")) {
                                 number = "0" + number.substring(3, number.length());
-                            } else if (number.substring(0, 1).equals("+")) {
+                            } else if (number.startsWith("+")) {
                                 number = "00" + number.substring(1, number.length());
                             }
                         } catch (Exception e) {
                         }
                         Log.d(MyLogTags.recording, "mobile number: " + number);
                         if (prefManager.getCallRecord() == Constants.RECORD_ALL
-                                || prefManager.getCallRecord() == Constants.RECORD_OUTGOING ) {
+                                || prefManager.getCallRecord() == Constants.RECORD_OUTGOING) {
                             startVoiceRecordingService(context, number, CallStatus.OUTGOING);
                         }
                     }
@@ -199,9 +197,9 @@ public class CallReceiver extends BroadcastReceiver {
 
                     mobile = originalNumber;
                     try {
-                        if (originalNumber.substring(0, 3).equals("+92")) {
+                        if (originalNumber.startsWith("+92")) {
                             mobile = "0" + originalNumber.substring(3, originalNumber.length());
-                        } else if (originalNumber.substring(0, 1).equals("+")) {
+                        } else if (originalNumber.startsWith("+")) {
                             mobile = "00" + originalNumber.substring(1, originalNumber.length());
                         } else {
                             mobile = originalNumber;
@@ -209,7 +207,7 @@ public class CallReceiver extends BroadcastReceiver {
                     } catch (Exception e) {
                     }
                     if (prefManager.getCallRecord() == Constants.RECORD_ALL
-                            || prefManager.getCallRecord() == Constants.RECORD_OUTGOING ) {
+                            || prefManager.getCallRecord() == Constants.RECORD_OUTGOING) {
                         startVoiceRecordingService(context, mobile, CallStatus.OUTGOING);
                     }
                 }
@@ -226,7 +224,7 @@ public class CallReceiver extends BroadcastReceiver {
                 voice_record_intent.putExtra("phNumber", mobile);
                 voice_record_intent.putExtra("type", callType);
                 context.startService(voice_record_intent);
-                Toast.makeText(context, "Recording Started.", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "Recording Started.", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             Log.d(MyLogTags.recording, "Recording Error: " + e.getMessage());
@@ -245,7 +243,7 @@ public class CallReceiver extends BroadcastReceiver {
                     MyVoiceRecordingService.recordStarted = false;
                 }
                 context.stopService(new Intent(context, MyVoiceRecordingService.class));
-                Toast.makeText(context, "Recording Stopped.", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "Recording Stopped.", Toast.LENGTH_SHORT).show();
                 Log.d(MyLogTags.recording, "Recording Stopped");
 
 //                MyVoiceRecordingService service = new MyVoiceRecordingService();

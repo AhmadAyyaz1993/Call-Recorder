@@ -1,4 +1,4 @@
-package net.net76.mannan.callrecorder;
+package net.net76.mannan.callrecorder.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

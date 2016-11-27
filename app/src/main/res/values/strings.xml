@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">Call Recorder</string>
+    <string name="app_title">Call Recordings</string>
     <string name="action_settings">Settings</string>
 
     <array name="contacts_list">
@@ -79,5 +80,9 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>
