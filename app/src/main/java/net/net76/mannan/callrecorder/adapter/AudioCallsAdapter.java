@@ -219,16 +219,19 @@ public class AudioCallsAdapter extends BaseAdapter {
                             }
                         } else {
 
-                            if (mediaPlayer.isPlaying()) {
-                                mediaPlayer.pause();
-                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_outline_black_48dp);
+                            try {
+                                if (mediaPlayer.isPlaying()) {
+                                    mediaPlayer.pause();
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                                        audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_outline_black_48dp);
+                                    }
+                                } else {
+                                    mediaPlayer.start();
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                                        audioPlayDialogButton.setBackgroundResource(R.drawable.ic_pause_circle_outline_black_48dp);
+                                    }
                                 }
-                            } else {
-                                mediaPlayer.start();
-                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_pause_circle_outline_black_48dp);
-                                }
+                            } catch (Exception e) {
                             }
                         }
                     }

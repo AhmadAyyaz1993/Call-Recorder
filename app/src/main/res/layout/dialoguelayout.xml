@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="6dp"
     android:elevation="4dp"
     android:paddingLeft="16dp"
-    android:layout_margin="6dp"
     android:paddingTop="16dp"
     app:cardCornerRadius="4dp">
 
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/ic_play_circle_outline_black_48dp" />
+                android:background="@drawable/play_button_selector" />
 
         </LinearLayout>
 
@@ -58,7 +58,7 @@
                     android:layout_weight="4.4"
                     android:maxLines="1"
                     android:text="call status"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/text_color" />
 
                 <TextView
                     android:id="@+id/dremaingtime"
@@ -69,7 +69,7 @@
                     android:gravity="center"
                     android:text="00:00:00"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/text_color" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -79,7 +79,7 @@
                     android:gravity="center"
                     android:text="/"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/text_color" />
 
                 <TextView
                     android:id="@+id/dtotaltime"
@@ -90,7 +90,7 @@
                     android:gravity="center"
                     android:text="00:00:00"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/text_color" />
 
             </LinearLayout>
 
@@ -110,7 +110,7 @@
                 android:gravity="center"
                 android:paddingBottom="6dp"
                 android:text="File Name"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/text_color" />
         </LinearLayout>
 
     </LinearLayout>
