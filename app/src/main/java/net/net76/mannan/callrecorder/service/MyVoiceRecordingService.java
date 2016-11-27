@@ -10,7 +10,6 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.util.Log;
 
-import net.net76.mannan.callrecorder.constants.CallStatus;
 import net.net76.mannan.callrecorder.constants.MyLogTags;
 import net.net76.mannan.callrecorder.util.MyDateTimeStamp;
 
@@ -26,7 +25,7 @@ public class MyVoiceRecordingService extends Service {
     public static boolean wasRinging = false;
     public static MediaRecorder recorder = null;
     File audioFile;
-    String type, phNumber, agent_num = "1";
+    String type, phNumber, name, agent_num = "1";
     public static String file_name;
     public static String audioFileDirectoryPath = "/CallRecorderFiles";
     public static String incomingPath = "/Incoming";
@@ -43,15 +42,17 @@ public class MyVoiceRecordingService extends Service {
         try {
             Bundle extras = intent.getExtras();
             if (extras == null) {
+                name = "name";
                 phNumber = "1";
                 agent_num = "1";
                 type = "call";
             } else {
                 phNumber = extras.getString("phNumber");
+                name = extras.getString("name");
                 agent_num = extras.getString("agent_num");
                 type = extras.getString("type");
             }
-            recordVoiceCall(phNumber, type);
+            recordVoiceCall(phNumber, name, type);
 //            recordVoiceCallAudioRecorder(phNumber, type);
         } catch (Exception e) {
             Log.d(MyLogTags.recording, "Recording bundle Exception: " + e.getMessage());
@@ -77,11 +78,12 @@ public class MyVoiceRecordingService extends Service {
         audioRecord.startRecording();
     }
 
-    public void recordVoiceCall(String phNumber, String type) {
+    public void recordVoiceCall(String phNumber, String name, String type) {
 
         File LastingSalesRecordingsDir = new File(Environment.getExternalStorageDirectory(),
                 audioFileDirectoryPath);
 
+/*
         if (type.equals(CallStatus.INCOMING)) {
             LastingSalesRecordingsDir = new File(Environment.getExternalStorageDirectory(),
                     audioFileDirectoryPath + incomingPath);
@@ -89,13 +91,14 @@ public class MyVoiceRecordingService extends Service {
             LastingSalesRecordingsDir = new File(Environment.getExternalStorageDirectory(),
                     audioFileDirectoryPath + outgoingPath);
         }
+*/
 
         if (!LastingSalesRecordingsDir.exists()) {
             LastingSalesRecordingsDir.mkdirs();
         }
 
         file_name = "call_" + MyDateTimeStamp.getCurrentDate() + "_" +
-                MyDateTimeStamp.getCurrentTimeForFile() + "_" + type + "_" + phNumber + "_";
+                MyDateTimeStamp.getCurrentTimeForFile() + "_" + type + "_" + phNumber + "_" + name;
         try {
             audioFile = File.createTempFile(file_name, ".mp3", LastingSalesRecordingsDir);
         } catch (IOException e) {

@@ -46,13 +46,14 @@ public class CallReceiver extends BroadcastReceiver {
 
                 String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
                 String number = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
+                String contactName = "";
 
                 if (TelephonyManager.EXTRA_STATE_RINGING.equals(state)) {
                     CallType = CallTypeIncoming;
                     Log.d(MyLogTags.MPR, "Its Ringing [" + number + "]");
                     if (prefManager.getCallRecord() == Constants.RECORD_ALL
                             || prefManager.getCallRecord() == Constants.RECORD_INCOMING) {
-                        startVoiceRecordingService(context, number, CallStatus.INCOMING);
+                        startVoiceRecordingService(context, number,contactName, CallStatus.INCOMING);
                     }
                 }
                 if (TelephonyManager.EXTRA_STATE_IDLE.equals(state)) {
@@ -93,6 +94,7 @@ public class CallReceiver extends BroadcastReceiver {
                         String callDuration = managedCursor.getString(duration);
                         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
+                        contactName = namee;
 //                        phNumber = phNumber.replaceAll("[^0-9]","");
 
                         try {
@@ -186,7 +188,7 @@ public class CallReceiver extends BroadcastReceiver {
                         Log.d(MyLogTags.recording, "mobile number: " + number);
                         if (prefManager.getCallRecord() == Constants.RECORD_ALL
                                 || prefManager.getCallRecord() == Constants.RECORD_OUTGOING) {
-                            startVoiceRecordingService(context, number, CallStatus.OUTGOING);
+                            startVoiceRecordingService(context, number, contactName, CallStatus.OUTGOING);
                         }
                     }
                 }
@@ -208,19 +210,20 @@ public class CallReceiver extends BroadcastReceiver {
                     }
                     if (prefManager.getCallRecord() == Constants.RECORD_ALL
                             || prefManager.getCallRecord() == Constants.RECORD_OUTGOING) {
-                        startVoiceRecordingService(context, mobile, CallStatus.OUTGOING);
+                        startVoiceRecordingService(context, mobile, contactName, CallStatus.OUTGOING);
                     }
                 }
             }
         }, 1500);
     }
 
-    private void startVoiceRecordingService(Context context, String mobile, String callType) {
+    private void startVoiceRecordingService(Context context, String mobile, String name, String callType) {
         try {
             if (MyVoiceRecordingService.wasRinging == false) {
                 MyVoiceRecordingService.wasRinging = true;
 //                                if (MyVoiceRecordingService.wasRinging == true) {
                 Intent voice_record_intent = new Intent(context, MyVoiceRecordingService.class);
+                voice_record_intent.putExtra("name", name);
                 voice_record_intent.putExtra("phNumber", mobile);
                 voice_record_intent.putExtra("type", callType);
                 context.startService(voice_record_intent);
