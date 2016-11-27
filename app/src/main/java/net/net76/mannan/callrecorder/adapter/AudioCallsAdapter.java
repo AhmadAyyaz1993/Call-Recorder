@@ -52,7 +52,7 @@ public class AudioCallsAdapter extends BaseAdapter {
     private Runnable UpdateSongTime1;
     private ArrayList<CallAllDetails> audioFileList = new ArrayList<CallAllDetails>();
     private static LayoutInflater inflater = null;
-
+    private static MediaMetadataRetriever mmr;
     public AudioCallsAdapter(Context context, ArrayList<CallAllDetails> filespathlist) {
         // TODO Auto-generated constructor stub
         this.audioFileList = filespathlist;
@@ -105,7 +105,7 @@ public class AudioCallsAdapter extends BaseAdapter {
         holder.filedatecreated = (TextView) rowView.findViewById(R.id.myaudiofiledate);
 
         if (audioFileList.size() > 0) {
-            MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+            mmr = new MediaMetadataRetriever();
             mmr.setDataSource(audioFileList.get(position).getMyfilepath());
             String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
             int millSecond = Integer.parseInt(durationStr);
