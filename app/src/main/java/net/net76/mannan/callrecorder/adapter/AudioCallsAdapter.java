@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -80,6 +81,7 @@ public class AudioCallsAdapter extends BaseAdapter {
     }
 
     public class Holder {
+        private LinearLayout playpauseView;
         private ImageButton playpausebtn;
         private TextView callfileName;
         private TextView totaltime;
@@ -95,6 +97,7 @@ public class AudioCallsAdapter extends BaseAdapter {
         final Holder holder = new Holder();
         View rowView;
         rowView = inflater.inflate(R.layout.audio_calls_list_row, null);
+        holder.playpauseView = (LinearLayout) rowView.findViewById(R.id.play_pause_view);
         holder.playpausebtn = (ImageButton) rowView.findViewById(R.id.play_pause_btn);
         holder.callfileName = (TextView) rowView.findViewById(R.id.audiofileName);
         holder.totaltime = (TextView) rowView.findViewById(R.id.durationtiming);
@@ -119,7 +122,6 @@ public class AudioCallsAdapter extends BaseAdapter {
             final String call_type = filename.substring(25, 33);
             int numlastpositionstr = filename.lastIndexOf("_");
             String call_number = filename.substring(34, numlastpositionstr);
-            String call_name = filename.substring(45, filename.lastIndexOf("_"));
             String call_time = filename.substring(16, 21);
             String call_date = filename.substring(5, 15);
             char[] call_timeArray = call_time.toCharArray();
@@ -132,7 +134,6 @@ public class AudioCallsAdapter extends BaseAdapter {
             holder.filetimecreated.setText(call_time);
             holder.filedatecreated.setText(call_date);
 
-            Log.d("audiofilesName", filename + " , " + call_name);
             holder.callfileName.setText(call_number);
 
             //status incomming or outgoing.
@@ -149,7 +150,8 @@ public class AudioCallsAdapter extends BaseAdapter {
             Log.d("audiofilesize", "Audio file size is 0");
         }
 
-        holder.playpausebtn.setOnClickListener(new View.OnClickListener() {
+//        holder.playpausebtn.setOnClickListener(new View.OnClickListener() {
+        holder.playpauseView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final AlertDialog.Builder audioPlayDialog = new AlertDialog.Builder(context, R.style.DialogTheme);
