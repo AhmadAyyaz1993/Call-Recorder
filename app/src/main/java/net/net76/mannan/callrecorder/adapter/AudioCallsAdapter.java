@@ -32,10 +32,10 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Shahid on 7/16/2016.
  */
-public class AudioCallsAdapter extends BaseAdapter{
+public class AudioCallsAdapter extends BaseAdapter {
     private Context context;
     private MediaPlayer mediaPlayer;
-    private boolean firsttime=true;
+    private boolean firsttime = true;
     private double startTime = 0;
     private double finalTime = 0;
     private Handler myHandler;
@@ -44,37 +44,41 @@ public class AudioCallsAdapter extends BaseAdapter{
     private TextView callstatus;
     private TextView totaltime;
     private TextView remaingtime;
-    private boolean running=true;
+    private boolean running = true;
     private SeekBar audioPlayDialogSeekBar;
-    private boolean filecompleted= false;
+    private boolean filecompleted = false;
     private boolean checkpoint = true;
     private Runnable UpdateSongTime;
     private Runnable UpdateSongTime1;
     private ArrayList<CallAllDetails> audioFileList = new ArrayList<CallAllDetails>();
-    private static LayoutInflater inflater=null;
+    private static LayoutInflater inflater = null;
 
     public AudioCallsAdapter(Context context, ArrayList<CallAllDetails> filespathlist) {
         // TODO Auto-generated constructor stub
         this.audioFileList = filespathlist;
-        this.context=context;
-        inflater = (LayoutInflater)context.
+        this.context = context;
+        inflater = (LayoutInflater) context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
         return audioFileList.size();
     }
+
     @Override
     public Object getItem(int position) {
         // TODO Auto-generated method stub
         return position;
     }
+
     @Override
     public long getItemId(int position) {
         // TODO Auto-generated method stub
         return position;
     }
+
     public class Holder {
         private ImageButton playpausebtn;
         private TextView callfileName;
@@ -84,6 +88,7 @@ public class AudioCallsAdapter extends BaseAdapter{
         private ImageView callstatus1;
 
     }
+
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
@@ -97,7 +102,7 @@ public class AudioCallsAdapter extends BaseAdapter{
         holder.filetimecreated = (TextView) rowView.findViewById(R.id.myaudiofiletime);
         holder.filedatecreated = (TextView) rowView.findViewById(R.id.myaudiofiledate);
 
-        if(audioFileList.size()>0){
+        if (audioFileList.size() > 0) {
             MediaMetadataRetriever mmr = new MediaMetadataRetriever();
             mmr.setDataSource(audioFileList.get(position).getMyfilepath());
             String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
@@ -113,42 +118,41 @@ public class AudioCallsAdapter extends BaseAdapter{
             String filename = audioFileList.get(position).filename;
             final String call_type = filename.substring(25, 33);
             int numlastpositionstr = filename.lastIndexOf("_");
-            String call_number = "";
-            call_number = filename.substring(34, numlastpositionstr);
+            String call_number = filename.substring(34, numlastpositionstr);
+            String call_name = filename.substring(45, filename.lastIndexOf("_"));
             String call_time = filename.substring(16, 21);
-            String call_date = filename.substring(5,15);
+            String call_date = filename.substring(5, 15);
             char[] call_timeArray = call_time.toCharArray();
-            for(int x = 0; x<call_timeArray.length; x++)
-            {
-                if(call_timeArray[x]=='.'){
-                    call_timeArray[x]=':';
+            for (int x = 0; x < call_timeArray.length; x++) {
+                if (call_timeArray[x] == '.') {
+                    call_timeArray[x] = ':';
                 }
             }
-            call_time =String.valueOf(call_timeArray);
+            call_time = String.valueOf(call_timeArray);
             holder.filetimecreated.setText(call_time);
             holder.filedatecreated.setText(call_date);
 
+            Log.d("audiofilesName", filename + " , " + call_name);
             holder.callfileName.setText(call_number);
 
             //status incomming or outgoing.
             if (filename.contains(CallStatus.INCOMING) || filename.contains(CallStatus.incoming)) {
 //            if (call_type.equals(CallStatus.INCOMING) || call_type.equals(CallStatus.incoming)) {
                 holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_incoming);
-            }else{
+            } else {
                 holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_outgoing);
             }
 //            if (call_type.equals(CallStatus.OUTGOING) || call_type.equals(CallStatus.outgoing)) {
 //                holder.callstatus1.setBackgroundResource(android.R.drawable.sym_call_outgoing);
 //            }
-        }
-        else{
-            Log.d("audiofilesize","Audio file size is 0");
+        } else {
+            Log.d("audiofilesize", "Audio file size is 0");
         }
 
         holder.playpausebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final AlertDialog.Builder audioPlayDialog = new AlertDialog.Builder(context,R.style.DialogTheme);
+                final AlertDialog.Builder audioPlayDialog = new AlertDialog.Builder(context, R.style.DialogTheme);
                 LayoutInflater inflater1 = LayoutInflater.from(context.getApplicationContext());
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
                 View layout1 = inflater1.inflate(R.layout.dialoguelayout, null);
@@ -189,10 +193,9 @@ public class AudioCallsAdapter extends BaseAdapter{
 
                 String[] call_type1 = getcallstatus(position);
                 callstatus.setText(call_type1[0]);
-                if(call_type1[1].equals("")){
+                if (call_type1[1].equals("")) {
                     dfilename.setText(call_type1[2]);
-                }
-                else{
+                } else {
                     dfilename.setText(call_type1[1]);
                 }
                 audioPlayDialogButton.setOnClickListener(new View.OnClickListener() {
@@ -228,10 +231,6 @@ public class AudioCallsAdapter extends BaseAdapter{
                     }
 
 
-
-
-
-
                 });
 
                 audioPlayDialogSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -241,10 +240,12 @@ public class AudioCallsAdapter extends BaseAdapter{
                         Log.d("Progress changed", "progress changed" + progress);
                         audioPlayDialogSeekBar.setMax((int) finalTime);
                     }
+
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar) {
                         Log.d("starttracking", "progress starTT");
                     }
+
                     @Override
                     public void onStopTrackingTouch(SeekBar seekBar) {
                     }
@@ -254,7 +255,7 @@ public class AudioCallsAdapter extends BaseAdapter{
                 mediaPlayer = new MediaPlayer();
                 mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 try {
-                    mediaPlayer.setDataSource(context,data);
+                    mediaPlayer.setDataSource(context, data);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -263,10 +264,10 @@ public class AudioCallsAdapter extends BaseAdapter{
                     @Override
                     public void onPrepared(MediaPlayer mp) {
                         finalTime = mp.getDuration();
-                        running=true;
+                        running = true;
                         mp.start();
 
-                        if(finalTime !=0){
+                        if (finalTime != 0) {
                             totaltime.setText(String.format("%02d:%02d:%02d",
                                     TimeUnit.MILLISECONDS.toHours((long) finalTime),
                                     TimeUnit.MILLISECONDS.toMinutes((long) finalTime),
@@ -316,13 +317,13 @@ public class AudioCallsAdapter extends BaseAdapter{
             private void updateTime() {
                 UpdateSongTime = new Runnable() {
                     public void run() {
-                        if(running==true) {
+                        if (running == true) {
                             startTime = mediaPlayer.getCurrentPosition();
                         }
-                        if(filecompleted==true){
-                            if(checkpoint){
-                                startTime =0;
-                                checkpoint =false;
+                        if (filecompleted == true) {
+                            if (checkpoint) {
+                                startTime = 0;
+                                checkpoint = false;
                             }
                         }
                         if (startTime > (finalTime - 100)) {
@@ -358,17 +359,19 @@ public class AudioCallsAdapter extends BaseAdapter{
         return rowView;
 
     }
+
     public interface CustomAdapterInterface extends OnCompletionListener {
         void onItemClick(int position);
 
     }
+
     public String[] getcallstatus(int i) {
         String str = audioFileList.get(i).filename;
         String call_type1 = str.substring(25, 33);
         int numlastpositionstr = str.lastIndexOf("_");
         String call_number = str.substring(34, numlastpositionstr);
         String contactName = "";
-        String[] array = {call_type1, contactName,call_number};
+        String[] array = {call_type1, contactName, call_number};
         return array;
     }
 }

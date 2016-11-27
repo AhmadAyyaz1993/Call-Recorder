@@ -10,11 +10,12 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="wrap_content"
         android:elevation="4dp"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
 
+<!--
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
@@ -29,7 +30,6 @@
             app:expandedTitleTextAppearance="@android:color/transparent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:titleEnabled="true">
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -74,6 +74,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="bottom"
                 android:elevation="6dp"
+                android:layout_marginTop="6dp"
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:tabGravity="fill"
@@ -81,7 +82,24 @@
                 app:tabMode="fixed" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
-
+-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="6dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:elevation="6dp"
+            android:layout_marginTop="6dp"
+            app:layout_collapseMode="pin"
+            app:tabGravity="fill"
+            app:tabMaxWidth="168dp"
+            app:tabMode="fixed" />
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_home" />

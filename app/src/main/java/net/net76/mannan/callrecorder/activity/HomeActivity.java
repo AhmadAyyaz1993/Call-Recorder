@@ -44,8 +44,8 @@ public class HomeActivity extends AppCompatActivity
 
         getSupportActionBar().setTitle(R.string.app_title);
 
-        tutorialTitle = (TextView) findViewById(R.id.tutorial_name_tv);
-        tutorialTitle.setText(R.string.app_title);
+//        tutorialTitle = (TextView) findViewById(R.id.tutorial_name_tv);
+//        tutorialTitle.setText(R.string.app_title);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +119,7 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+//        getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
 

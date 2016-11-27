@@ -61,6 +61,8 @@ public class IncomingFragment extends Fragment {
 
         initInstance(rootView);
 
+        recordingHeadertv.setVisibility(View.GONE);
+
         new MyAsyncTask(getContext()).execute();
 
         return rootView;
@@ -86,7 +88,7 @@ public class IncomingFragment extends Fragment {
         protected void onPreExecute() {
             super.onPreExecute();
             progressBar.setVisibility(View.VISIBLE);
-//            category_progress_bar.setVisibility(View.VISIBLE);
+            recordingHeadertv.setVisibility(View.GONE);
         }
 
         @Override
@@ -105,6 +107,7 @@ public class IncomingFragment extends Fragment {
             super.onPostExecute(aVoid);
 
             if (audioFilePathList.size() == 0) {
+                recordingHeadertv.setVisibility(View.VISIBLE);
                 recordingHeadertv.setText("No recording found.");
                 progressBar.setVisibility(View.GONE);
             } else {

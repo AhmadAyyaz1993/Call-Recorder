@@ -98,7 +98,7 @@ public class MyVoiceRecordingService extends Service {
         }
 
         file_name = "call_" + MyDateTimeStamp.getCurrentDate() + "_" +
-                MyDateTimeStamp.getCurrentTimeForFile() + "_" + type + "_" + phNumber + "_" + name;
+                MyDateTimeStamp.getCurrentTimeForFile() + "_" + type + "_" + phNumber + "_";
         try {
             audioFile = File.createTempFile(file_name, ".mp3", LastingSalesRecordingsDir);
         } catch (IOException e) {
