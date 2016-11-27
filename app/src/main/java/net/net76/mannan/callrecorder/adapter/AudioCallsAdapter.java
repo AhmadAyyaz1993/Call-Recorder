@@ -209,7 +209,7 @@ public class AudioCallsAdapter extends BaseAdapter {
                             if (mediaPlayer.isPlaying()) {
                                 mediaPlayer.pause();
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_filled_black_48dp);
+                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_outline_black_48dp);
                                 }
                             } else {
                                 mediaPlayer.start();
@@ -222,7 +222,7 @@ public class AudioCallsAdapter extends BaseAdapter {
                             if (mediaPlayer.isPlaying()) {
                                 mediaPlayer.pause();
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_filled_black_48dp);
+                                    audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_outline_black_48dp);
                                 }
                             } else {
                                 mediaPlayer.start();
@@ -300,7 +300,7 @@ public class AudioCallsAdapter extends BaseAdapter {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
                         audioPlayDialogSeekBar.setProgress(0);
-                        audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_filled_black_48dp);
+                        audioPlayDialogButton.setBackgroundResource(R.drawable.ic_play_circle_outline_black_48dp);
                         filecompleted = true;
                         startTime = 0;
                         mediaPlayer.pause();
