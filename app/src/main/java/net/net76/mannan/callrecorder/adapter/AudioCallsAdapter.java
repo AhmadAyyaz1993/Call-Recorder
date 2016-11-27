@@ -150,8 +150,7 @@ public class AudioCallsAdapter extends BaseAdapter {
             Log.d("audiofilesize", "Audio file size is 0");
         }
 
-//        holder.playpausebtn.setOnClickListener(new View.OnClickListener() {
-        holder.playpauseView.setOnClickListener(new View.OnClickListener() {
+        holder.playpausebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final AlertDialog.Builder audioPlayDialog = new AlertDialog.Builder(context, R.style.DialogTheme);
@@ -174,13 +173,16 @@ public class AudioCallsAdapter extends BaseAdapter {
                 audioPlayDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
                     public void onDismiss(DialogInterface dialog) {
-                        mediaPlayer.pause();
-                        mediaPlayer.stop();
-                        mediaPlayer.reset();
-                        mediaPlayer.release();
-                        myHandler.removeCallbacks(UpdateSongTime);
-                        filecompleted = false;
-                        running = false;
+                        try {
+                            mediaPlayer.pause();
+                            mediaPlayer.stop();
+                            mediaPlayer.reset();
+                            mediaPlayer.release();
+                            myHandler.removeCallbacks(UpdateSongTime);
+                            filecompleted = false;
+                            running = false;
+                        } catch (Exception e) {
+                        }
                     }
                 });
                 audioPlayDialog.setCancelable(true);
