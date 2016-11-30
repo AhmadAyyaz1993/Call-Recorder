@@ -60,7 +60,7 @@ public class HomeActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);*/
 
         getSupportActionBar().setIcon(R.drawable.ic_mic_white_24dp);
-        getSupportActionBar().setTitle(" "+getResources().getString(R.string.app_title));
+        getSupportActionBar().setTitle(" " + getResources().getString(R.string.app_title));
 
         mViewPager = (ViewPager) findViewById(R.id.containerViewPager);
         setUpViewPager(mViewPager);
@@ -105,12 +105,15 @@ public class HomeActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
+/*
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
+*/
     }
 
     @Override
