@@ -7,7 +7,7 @@
     <array name="contacts_list">
         <item>No Record Found</item>
     </array>
-    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_settings">Recording Settings</string>
 
     <!-- Strings related to Settings -->
 

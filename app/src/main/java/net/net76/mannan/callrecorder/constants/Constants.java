@@ -9,5 +9,6 @@ public class Constants {
     public static int RECORD_ALL = 0;
     public static int RECORD_INCOMING = 1;
     public static int RECORD_OUTGOING = 2;
+    public static int RECORD_NOTHING = 3;
 
 }
