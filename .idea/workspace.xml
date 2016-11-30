@@ -13,16 +13,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51031acc-360b-4ca9-9498-1dd2bfff4e54" name="Default" comment="intetrnet permission adde.d">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/call-recorder.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_settings.xml" />
+    <list default="true" id="51031acc-360b-4ca9-9498-1dd2bfff4e54" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/constants/Constants.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/constants/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" />
     </list>
     <ignored path="call-recorder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,26 +48,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-              <folding>
-                <element signature="e#1684#1702#0" expanded="true" />
-                <element signature="e#2440#2484#0" expanded="true" />
-                <marker date="1480489898241" expanded="true" signature="1812:1830" ph="&quot;Call Recordings&quot;" />
-              </folding>
-            </state>
+      <file leaf-file-name="content_audio_calls.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="e#481#521#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1870,8 +1854,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/constants/CallStatus.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/receiver/CallReceiver.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/service/MyVoiceRecordingService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/util/MyDevice.java" />
@@ -1880,12 +1862,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/play_button_selector.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialoguelayout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/adapter/AudioCallsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
@@ -1893,6 +1873,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java" />
       </list>
     </option>
   </component>
@@ -2020,7 +2004,7 @@
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="device.picker.selection" value="A6JBO7YDEADY4TDI" />
-    <property name="SearchEverywhereHistoryKey" value="home&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java&#10;rec&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/receiver/CallReceiver.java&#10;dia&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/dialoguelayout.xml&#10;spla&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/activity_splash.xml&#10;na&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/nav_header_home.xml&#10;h&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java&#10;activity_audio_calls&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/activity_audio_calls.xml" />
+    <property name="SearchEverywhereHistoryKey" value="INCOM&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java&#10;outg&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java&#10;home&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java&#10;rec&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/receiver/CallReceiver.java&#10;dia&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/dialoguelayout.xml&#10;spla&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/activity_splash.xml&#10;na&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/nav_header_home.xml&#10;h&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java&#10;activity_audio_calls&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/activity_audio_calls.xml" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="DEBUGGABLE_DEVICE" value="qmobile-a20-A6JBO7YDEADY4TDI" />
     <property name="DEBUGGABLE_PROCESS" value="net.net76.mannan.callrecorder" />
@@ -2445,7 +2429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480266865190</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="drawer code commented in home screen for first iteration only.&#10;Settings activity created but not funcitonal now.">
+      <created>1480489956498</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1480489956498</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2467,7 +2458,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -2512,7 +2503,8 @@
     <MESSAGE value="play button changed." />
     <MESSAGE value="dialog text color added.&#10;button selector created." />
     <MESSAGE value="intetrnet permission adde.d" />
-    <option name="LAST_COMMIT_MESSAGE" value="intetrnet permission adde.d" />
+    <MESSAGE value="drawer code commented in home screen for first iteration only.&#10;Settings activity created but not funcitonal now." />
+    <option name="LAST_COMMIT_MESSAGE" value="drawer code commented in home screen for first iteration only.&#10;Settings activity created but not funcitonal now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2539,6 +2531,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="432" column="18" selection-start-line="432" selection-start-column="18" selection-end-line="432" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2553,6 +2546,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#351#352#0" expanded="false" />
+            <element signature="e#384#385#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2611,6 +2608,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2637,14 +2635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="106" column="13" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -2678,6 +2668,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#357#382#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2782,6 +2775,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2804,6 +2798,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="113" column="66" selection-start-line="113" selection-start-column="66" selection-end-line="113" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2811,6 +2806,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2833,17 +2829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2852,24 +2837,6 @@
         <state relative-caret-position="129">
           <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="59" column="61" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -2942,14 +2909,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <element signature="e#3054#3087#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        <state relative-caret-position="187">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
           <folding>
             <element signature="e#1684#1702#0" expanded="true" />
             <element signature="e#2440#2484#0" expanded="true" />
             <marker date="1480489898241" expanded="true" signature="1812:1830" ph="&quot;Call Recordings&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#2599#2600#0" expanded="true" />
+            <element signature="e#2645#2646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#481#521#0" expanded="true" />
           </folding>
         </state>
       </provider>
