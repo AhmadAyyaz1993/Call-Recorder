@@ -46,12 +46,12 @@ public class SettingsActivity extends AppCompatActivity {
             outgoingSwitch.setChecked(true);
         } else if (prefManager.getCallRecord() == Constants.RECORD_OUTGOING) {
             allSwitch.setChecked(false);
-            incomingSwitch.setChecked(false);
+
             outgoingSwitch.setChecked(true);
         } else if (prefManager.getCallRecord() == Constants.RECORD_INCOMING) {
             allSwitch.setChecked(false);
             incomingSwitch.setChecked(true);
-            outgoingSwitch.setChecked(false);
+
         }
     }
 
