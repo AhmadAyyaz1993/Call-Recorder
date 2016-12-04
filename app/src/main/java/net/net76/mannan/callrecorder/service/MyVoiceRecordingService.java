@@ -186,6 +186,7 @@ public class MyVoiceRecordingService extends Service {
 //        System.exit(0);
 
         if (recordStarted) {
+
             recorder.stop();
             recorder.reset();
             recorder.release();

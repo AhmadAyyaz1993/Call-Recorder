@@ -34,8 +34,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void initializeViews() {
         allSwitch = (Switch) findViewById(R.id.recordAllSwitch);
-        incomingSwitch = (Switch) findViewById(R.id.recordAllSwitch);
-        outgoingSwitch = (Switch) findViewById(R.id.recordAllSwitch);
+        incomingSwitch = (Switch) findViewById(R.id.recordIncomingSwitch);
+        outgoingSwitch = (Switch) findViewById(R.id.recordOutgoinSwitch);
         prefManager = new PrefManager(getApplicationContext());
     }
 
