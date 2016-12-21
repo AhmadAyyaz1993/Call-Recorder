@@ -17,7 +17,6 @@ public class SettingsActivity extends AppCompatActivity {
 
     Switch allSwitch, incomingSwitch, outgoingSwitch;
     PrefManager prefManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,19 +82,28 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    if (incomingSwitch.isChecked()) {
-                        prefManager.setCallRecord(Constants.RECORD_ALL);
-                        incomingSwitch.setChecked(true);
-                        outgoingSwitch.setChecked(true);
-                    } else {
-                        prefManager.setCallRecord(Constants.RECORD_INCOMING);
+                    prefManager.setCallRecord(Constants.RECORD_INCOMING);
+                    incomingSwitch.setChecked(true);
+                    if(outgoingSwitch.isChecked()){
+                        allSwitch.setChecked(true);
                     }
-                } else {
-                    if (allSwitch.isChecked()) {
-                        prefManager.setCallRecord(Constants.RECORD_OUTGOING);
-                    } else {
-                        prefManager.setCallRecord(Constants.RECORD_NOTHING);
-                    }
+                }else{
+                    allSwitch.setOnCheckedChangeListener (null);
+                    allSwitch.setChecked(false);
+                    allSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        @Override
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            if (isChecked) {
+                                incomingSwitch.setChecked(true);
+                                outgoingSwitch.setChecked(true);
+                                prefManager.setCallRecord(Constants.RECORD_ALL);
+                            } else {
+                                incomingSwitch.setChecked(false);
+                                outgoingSwitch.setChecked(false);
+                                prefManager.setCallRecord(Constants.RECORD_NOTHING);
+                            }
+                        }
+                    });
                 }
             }
         });
@@ -106,17 +114,28 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    if (incomingSwitch.isChecked()) {
-                        prefManager.setCallRecord(Constants.RECORD_ALL);
-                    } else {
-                        prefManager.setCallRecord(Constants.RECORD_OUTGOING);
+                    prefManager.setCallRecord(Constants.RECORD_OUTGOING);
+                    outgoingSwitch.setChecked(true);
+                    if(incomingSwitch.isChecked()){
+                        allSwitch.setChecked(true);
                     }
                 } else {
-                    if (allSwitch.isChecked()) {
-                        prefManager.setCallRecord(Constants.RECORD_INCOMING);
-                    } else {
-                        prefManager.setCallRecord(Constants.RECORD_NOTHING);
-                    }
+                    allSwitch.setOnCheckedChangeListener (null);
+                    allSwitch.setChecked(false);
+                    allSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        @Override
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            if (isChecked) {
+                                incomingSwitch.setChecked(true);
+                                outgoingSwitch.setChecked(true);
+                                prefManager.setCallRecord(Constants.RECORD_ALL);
+                            } else {
+                                incomingSwitch.setChecked(false);
+                                outgoingSwitch.setChecked(false);
+                                prefManager.setCallRecord(Constants.RECORD_NOTHING);
+                            }
+                        }
+                    });
                 }
             }
         });

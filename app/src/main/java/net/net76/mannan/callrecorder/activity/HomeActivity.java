@@ -40,8 +40,10 @@ public class HomeActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-//        setContentView(R.layout.app_bar_home);
+ //       setContentView(R.layout.app_bar_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(getResources().getString(R.string.app_title));
+
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setTitle(R.string.app_title);
@@ -59,9 +61,6 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        getSupportActionBar().setIcon(R.drawable.ic_mic_black_24dp);
-        getSupportActionBar().setTitle(" " + getResources().getString(R.string.app_title));
 
         mViewPager = (ViewPager) findViewById(R.id.containerViewPager);
         setUpViewPager(mViewPager);
