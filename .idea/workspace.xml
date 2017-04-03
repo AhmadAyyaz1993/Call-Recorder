@@ -18,8 +18,9 @@
   <component name="ChangeListManager">
     <list default="true" id="51031acc-360b-4ca9-9498-1dd2bfff4e54" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialoguelayout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialoguelayout.xml" />
     </list>
     <ignored path="call-recorder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,17 +52,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="content_audio_calls.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml">
+      <file leaf-file-name="dialoguelayout.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialoguelayout.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
-              <folding>
-                <element signature="e#2307#2335#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="167">
+              <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1551,7 +1550,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="D:\Android_Projects\call-recorder" value="4447238491091" />
+        <entry key="D:\Android_Projects\call-recorder" value="4447242458516" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1914,13 +1913,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/play_button_selector.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialoguelayout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/constants/Constants.java" />
         <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/AudioCallsListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/customnotification.xml" />
@@ -1939,9 +1936,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/adapter/AudioCallsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_settings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialoguelayout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/thumb_image.xml" />
       </list>
     </option>
   </component>
@@ -2061,7 +2061,7 @@
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="device.picker.selection" value="HC47GWY63859" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/audio_calls_list_row.xml&#10;sett&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java&#10;inc&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java&#10;frag&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java&#10;home&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/content_home.xml&#10;row&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/audio_calls_list_row.xml&#10;ma&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/AndroidManifest.xml&#10;audio_calls_list_row&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/audio_calls_list_row.xml&#10;INCOM&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java&#10;outg&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java&#10;rec&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/receiver/CallReceiver.java&#10;dia&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/dialoguelayout.xml&#10;spla&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/activity_splash.xml&#10;na&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/nav_header_home.xml&#10;h&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java&#10;activity_audio_calls&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/activity_audio_calls.xml" />
+    <property name="SearchEverywhereHistoryKey" value="ada&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/adapter/AudioCallsAdapter.java&#10;dialog&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_dialog_title_material.xml&#10;sett&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java&#10;inc&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java&#10;frag&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java&#10;home&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/content_home.xml&#10;row&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/audio_calls_list_row.xml&#10;ma&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/AndroidManifest.xml&#10;audio_calls_list_row&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/audio_calls_list_row.xml&#10;INCOM&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java&#10;outg&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java&#10;rec&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/receiver/CallReceiver.java&#10;dia&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/dialoguelayout.xml&#10;spla&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/activity_splash.xml&#10;na&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/nav_header_home.xml&#10;h&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java&#10;activity_audio_calls&#9;FILE&#9;file://D:/Android_Projects/call-recorder/app/src/main/res/layout/activity_audio_calls.xml" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="DEBUGGABLE_DEVICE" value="qmobile-a20-A6JBO7YDEADY4TDI" />
     <property name="DEBUGGABLE_PROCESS" value="net.net76.mannan.callrecorder" />
@@ -2601,12 +2601,19 @@
       <option name="project" value="LOCAL" />
       <updated>1491243410590</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="admob key changed to blood wali key.">
+      <created>1491243651264</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1491243651264</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -2615,7 +2622,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6825939" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -2675,7 +2682,8 @@
     <MESSAGE value="action bar bug fixed." />
     <MESSAGE value="v2 uploaded to ps" />
     <MESSAGE value="share file option added.&#10;remove app icon functionality added.&#10;seekbar bug fixed.&#10;admob added.&#10;contact name added.&#10;settings improved." />
-    <option name="LAST_COMMIT_MESSAGE" value="share file option added.&#10;remove app icon functionality added.&#10;seekbar bug fixed.&#10;admob added.&#10;contact name added.&#10;settings improved." />
+    <MESSAGE value="admob key changed to blood wali key." />
+    <option name="LAST_COMMIT_MESSAGE" value="admob key changed to blood wali key." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2748,14 +2756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar!/com/google/android/gms/ads/AdView.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -2807,17 +2807,6 @@
       </provider>
       <provider editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_dialog_title_material.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
@@ -2987,16 +2976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/adapter/AudioCallsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4989">
-          <caret line="623" column="51" selection-start-line="623" selection-start-column="51" selection-end-line="623" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -3025,17 +3004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_settings.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3060,11 +3028,85 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
+        <state relative-caret-position="-480">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="43" />
           <folding>
             <element signature="e#2307#2335#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_dialog_title_material.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_play_circle_outline_black_48dp.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/adapter/AudioCallsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="128" column="67" selection-start-line="128" selection-start-column="67" selection-end-line="128" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#11533#13904#0" expanded="true" />
+            <element signature="e#13903#13904#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="25" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-24/data/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/thumb_image.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialoguelayout.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
