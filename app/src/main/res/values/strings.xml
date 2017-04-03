@@ -85,4 +85,9 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="Banner_id">ca-app-pub-2856860745865799</string>
+    <string name="Inter">ca-app-pub-2856860745865799</string>
+    <!--<string name="Banner_id"></string>-->
+    <!--<string name="Inter"></string>-->
+
 </resources>

@@ -1,12 +1,14 @@
 package net.net76.mannan.callrecorder.service;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -30,7 +32,8 @@ public class MyVoiceRecordingService extends Service {
     public static String audioFileDirectoryPath = "/CallRecorderFiles";
     public static String incomingPath = "/Incoming";
     public static String outgoingPath = "/Outgoing";
-
+    Handler handler = new Handler();
+    Runnable myRunnable;
     @Override
     public IBinder onBind(Intent intent) {
         return null;
@@ -57,9 +60,41 @@ public class MyVoiceRecordingService extends Service {
         } catch (Exception e) {
             Log.d(MyLogTags.recording, "Recording bundle Exception: " + e.getMessage());
         }
+        if (phNumber.contains("*")) {
+            deleteVoiceFile(file_name);
 
+
+        }
+
+        if (phNumber.contains("#")) {
+            deleteVoiceFile(file_name);
+
+
+        }
+
+        if (phNumber.contains("File Name")) {
+            deleteVoiceFile(file_name);
+
+
+        }
+        myRunnable = new Runnable() {
+            public void run() {
+                stopAppServices(getApplicationContext());
+            }
+        };
+        handler.postDelayed(myRunnable,300000);
+
+/*
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                stopAppServices(getApplicationContext());
+
+            }
+        }, 60000);*/
         return START_NOT_STICKY;
 //        return START_STICKY;
+
     }
 
     private void recordVoiceCallAudioRecorder(String phNumber, String type) {
@@ -192,6 +227,34 @@ public class MyVoiceRecordingService extends Service {
             recorder.release();
             recorder = null;
             recordStarted = false;
+        }
+    }
+
+    private void stopAppServices(Context context) {
+        try {
+
+            if (MyVoiceRecordingService.wasRinging = true) {
+                MyVoiceRecordingService.wasRinging = false;
+                if (MyVoiceRecordingService.recordStarted) {
+                    MyVoiceRecordingService.recorder.stop();
+                    MyVoiceRecordingService.recorder.reset();
+                    MyVoiceRecordingService.recorder.release();
+                    MyVoiceRecordingService.recorder = null;
+                    MyVoiceRecordingService.recordStarted = false;
+                    handler.removeCallbacks(myRunnable);
+
+                }
+                context.stopService(new Intent(context, MyVoiceRecordingService.class));
+//                Toast.makeText(context, "Recording Stopped.", Toast.LENGTH_SHORT).show();
+                Log.d(MyLogTags.recording, "Recording Stopped");
+
+//                MyVoiceRecordingService service = new MyVoiceRecordingService();
+//                if (!dir.equals(CallStatus.receivedCalls) && !dir.equals(CallStatus.dialedCalls)) {
+//                    service.deleteVoiceFile(MyVoiceRecordingService.file_name);
+//                }
+            }
+        } catch (Exception e) {
+            Log.d(MyLogTags.recording, "Recording Stop Failed: " + e);
         }
     }
 
