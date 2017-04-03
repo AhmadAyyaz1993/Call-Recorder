@@ -85,9 +85,9 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="Banner_id">ca-app-pub-2856860745865799</string>
-    <string name="Inter">ca-app-pub-2856860745865799</string>
-    <!--<string name="Banner_id"></string>-->
-    <!--<string name="Inter"></string>-->
+    <string name="Inter">@string/interstitial_full_screen</string>
+    <string name="banner_home_footer">ca-app-pub-1142291301644055/5964435724</string>
+    <string name="interstitial_full_screen">ca-app-pub-1142291301644055/8917902128</string>
+
 
 </resources>

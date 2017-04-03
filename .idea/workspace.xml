@@ -17,23 +17,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51031acc-360b-4ca9-9498-1dd2bfff4e54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/NotificationViewActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/receiver/DialReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_refresh_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/customnotification.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/HomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/OutGoingFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/adapter/AudioCallsAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/adapter/AudioCallsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/receiver/CallReceiver.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/receiver/CallReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/service/MyVoiceRecordingService.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/service/MyVoiceRecordingService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_settings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="call-recorder.iws" />
@@ -66,28 +51,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="content_settings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_settings.xml">
+      <file leaf-file-name="content_audio_calls.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="audio_calls_list_row.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="333">
+              <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
+              <folding>
+                <element signature="e#2307#2335#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +85,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
-      <GitPushTagMode />
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
     </option>
   </component>
   <component name="GradleLocalSettings">
@@ -1956,15 +1933,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/util/PrefManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/receiver/CallReceiver.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/receiver/DialReceiver.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/content_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/fragments/IncomingFragment.java" />
         <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/audio_calls_list_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/adapter/AudioCallsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net76/mannan/callrecorder/activity/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml" />
       </list>
     </option>
   </component>
@@ -2025,6 +2002,28 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="call-recorder" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2038,6 +2037,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="call-recorder" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2585,7 +2594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482494449352</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="share file option added.&#10;remove app icon functionality added.&#10;seekbar bug fixed.&#10;admob added.&#10;contact name added.&#10;settings improved.">
+      <created>1491243410590</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1491243410590</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2658,7 +2674,8 @@
     <MESSAGE value="drawer bug fixed on Back pressed." />
     <MESSAGE value="action bar bug fixed." />
     <MESSAGE value="v2 uploaded to ps" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2 uploaded to ps" />
+    <MESSAGE value="share file option added.&#10;remove app icon functionality added.&#10;seekbar bug fixed.&#10;admob added.&#10;contact name added.&#10;settings improved." />
+    <option name="LAST_COMMIT_MESSAGE" value="share file option added.&#10;remove app icon functionality added.&#10;seekbar bug fixed.&#10;admob added.&#10;contact name added.&#10;settings improved." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2726,7 +2743,7 @@
           <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
           <folding>
             <element signature="e#564#604#0" expanded="true" />
-            <element signature="e#2307#2326#0" expanded="true" />
+            <element signature="e#2307#2335#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2924,14 +2941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_home.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3016,16 +3025,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#1118#1153#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3040,14 +3047,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/audio_calls_list_row.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="87" column="57" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_audio_calls.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="333">
+          <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
+          <folding>
+            <element signature="e#2307#2335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

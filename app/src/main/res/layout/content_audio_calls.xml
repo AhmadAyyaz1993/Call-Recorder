@@ -58,7 +58,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="3dp"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/Banner_id"></com.google.android.gms.ads.AdView>
+            ads:adUnitId="@string/banner_home_footer" />
 
     </LinearLayout>
 </LinearLayout>
