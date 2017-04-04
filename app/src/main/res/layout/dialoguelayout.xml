@@ -1,118 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="6dp"
-    android:elevation="4dp"
-    android:paddingLeft="16dp"
-    android:paddingTop="16dp"
-    app:cardCornerRadius="0dp">
+    android:layout_height="wrap_content">
 
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:orientation="horizontal"
-        android:weightSum="15">
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:elevation="4dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        app:cardCornerRadius="0dp">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_weight="3"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/your_dialog_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/play_button_selector" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/seekbarlayoutid"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="110dp"
-            android:layout_weight="12"
-            android:orientation="vertical"
-            android:weightSum="12">
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:weightSum="15">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4"
-                android:orientation="horizontal"
-                android:weightSum="10">
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center">
 
-                <TextView
-                    android:id="@+id/dcallstatus"
-                    android:layout_width="0dp"
+                <ImageButton
+                    android:id="@+id/your_dialog_button"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="4.4"
-                    android:maxLines="1"
-                    android:text="call status"
-                    android:textColor="@color/text_color" />
-
-                <TextView
-                    android:id="@+id/dremaingtime"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2.7"
-                    android:gravity="center"
-                    android:text="00:00:00"
-                    android:textAlignment="center"
-                    android:textColor="@color/text_color" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.2"
-                    android:gravity="center"
-                    android:text="/"
-                    android:textAlignment="center"
-                    android:textColor="@color/text_color" />
-
-                <TextView
-                    android:id="@+id/dtotaltime"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="2.7"
-                    android:gravity="center"
-                    android:text="00:00:00"
-                    android:textAlignment="center"
-                    android:textColor="@color/text_color" />
+                    android:background="@drawable/play_button_selector" />
 
             </LinearLayout>
 
-            <SeekBar
-                android:id="@+id/your_dialog_seekbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="4"
-                android:thumb="@drawable/thumb_image" />
+            <LinearLayout
+                android:id="@+id/seekbarlayoutid"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="12"
+                android:orientation="vertical"
+                android:weightSum="12">
 
-            <TextView
-                android:id="@+id/dcallnameid"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4"
-                android:gravity="center"
-                android:paddingBottom="6dp"
-                android:text="File Name"
-                android:textColor="@color/text_color" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/dcallstatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="4.4"
+                        android:maxLines="1"
+                        android:text="call status"
+                        android:textColor="@color/text_color" />
+
+                    <TextView
+                        android:id="@+id/dremaingtime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.7"
+                        android:gravity="center"
+                        android:text="00:00:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:text="/"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color" />
+
+                    <TextView
+                        android:id="@+id/dtotaltime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.7"
+                        android:gravity="center"
+                        android:text="00:00:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/your_dialog_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:thumb="@drawable/thumb_image" />
+
+                <TextView
+                    android:id="@+id/dcallnameid"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:paddingBottom="6dp"
+                    android:text="File Name"
+                    android:textColor="@color/text_color" />
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
-
-</android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
