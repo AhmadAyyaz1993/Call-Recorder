@@ -115,7 +115,7 @@ public class OutGoingFragment extends Fragment {
         mInterstitialAd = new InterstitialAd(getContext());
 
         // set the ad unit ID
-        mInterstitialAd.setAdUnitId(getString(R.string.Inter));
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_full_screen));
 
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
